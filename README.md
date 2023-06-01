@@ -1,6 +1,8 @@
 ## Github Card Display
 
-## Generate a list of issues from the GH CLI
+https://githubcard.markfullmer.com/
+
+## Generate a list of issues from the GH CLI to render as printable cards
 
 ```
 REPO=""
