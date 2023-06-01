@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Github Issue Printable Card Generator</title>
+  <meta name="description" content="Get current status of a list of issues from drupal.org">
+  <meta property="og:title" content="mark fullmer">
+  <meta property="og:description" content="Use this to generate a physical card representation from Github issues." />
+  <meta property="og:url" content="https://githubcard.markfullmer.com/" />
+  <meta property="og:site_name" content="Github Issue Printable Card Generator" />
+  <link rel="canonical" href="https://githubcard.markfullmer.com/" />
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<div class="container">
+    <h1>Github Issue Printable Card Generator</h1>
+    <p>Use this to generate a physical card representation from Github issues. Create JSON output of Github issues using the Github CLI:</p><p>Example: <code>gh api -X GET search/issues?order=asc\&sort=updated\&per_page=100 -f q="is:issue repo:$HOST/$REPO state:open" > $REPO.json</code></p>
+    <form action="/cards.php" method="POST">
+      <div class="row">
+          <label for="json">Paste GH CLI issue JSON here</label>
+          <textarea id="json" class="u-full-width textbox" placeholder="Paste GH CLI issue JSON here" name="json"></textarea>
+          <input type="submit" name="submit" value="Generate cards" />
+        </div>
+      </div>
+    </form>
+</div>
+</html>

@@ -1,0 +1,4 @@
+name: github-card-display
+recipe: lamp
+config:
+  webroot: .
